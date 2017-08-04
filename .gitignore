@@ -1,0 +1,6 @@
+.idea
+*.pyc
+.env
+node/node_modules
+go/pkg
+go/src

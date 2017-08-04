@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.sms";
+option java_outer_classname = "SMSProto";
+option objc_class_prefix = "HLW";
+
+package sms;
+
+service SMS {
+  rpc Send (SMSRequest) returns (SMSReply) {}
+}
+
+message SMSRequest {
+  string tel = 1;
+  string msg = 2;
+}
+
+message SMSReply {
+  int64 status = 1;
+}
